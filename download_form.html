@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opera GX | Navegador Gaming</title>
+    <meta
+      name="description"
+      content="Opera GX reimaginado como una landing estática, desplegable y con formulario para descargar."
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#">
+          <span class="brand-mark"></span>
+          <span>Opera GX</span>
+        </a>
+        <nav class="topbar-nav" aria-label="Navegación principal">
+          <a href="#features">Funciones</a>
+          <a href="#download">Descargar</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="download">
+          <div class="hero-copy">
+            <p class="eyebrow">NAVEGADOR GAMING</p>
+            <h1>Toma el control de tu navegador</h1>
+            <p class="hero-description">
+              Evita caídas de FPS, limita RAM, CPU y red, bloquea anuncios y
+              personaliza tu experiencia con un diseño pensado para gamers.
+            </p>
+            <div class="hero-actions">
+              <button class="cta-button" type="button" data-open-modal>
+                Descargar Opera GX
+              </button>
+              <a class="secondary-link" href="index.html">Ver funciones</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Características destacadas de Opera GX">
+            <div class="card-badge">GX</div>
+            <ul>
+              <li>Limitadores de RAM, CPU y red</li>
+              <li>Bloqueo de anuncios y rastreadores</li>
+              <li>Mods, sonido y personalización</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="features" id="features">
+          <article class="feature-card">
+            <h2>Rendimiento</h2>
+            <p>Optimiza el consumo de recursos para que tu PC siga enfocada en jugar.</p>
+          </article>
+          <article class="feature-card">
+            <h2>Privacidad</h2>
+            <p>Protege tu navegación con bloqueos integrados y una VPN gratuita.</p>
+          </article>
+          <article class="feature-card">
+            <h2>Personalización</h2>
+            <p>Adapta colores, sonidos y apariencia a tu estilo y tus juegos.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Opera GX · Una experiencia de navegación hecha para gamers.</p>
+      </footer>
+    </div>
+
+    <div class="modal-backdrop" id="downloadModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="Cerrar formulario">×</button>
+        <div class="modal-body">
+          <p class="eyebrow">Paso 1</p>
+          <h2 id="modalTitle">Tu descarga empieza aquí</h2>
+          <p class="modal-copy">
+            Completa este mini formulario para continuar con Opera GX.
+          </p>
+
+          <form action="https://formspree.io/f/xzdlyjpl" method="POST" id="downloadForm" novalidate>
+            <label for="nickname">Nombre o nickname</label>
+            <input
+              id="nickname"
+              name="nickname"
+              type="text"
+              maxlength="60"
+              placeholder="Ej. ByteMaster"
+              required
+            />
+
+            <label for="email">Correo electrónico</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="tu@email.com"
+              required
+            />
+
+            <button class="cta-button form-submit" type="submit">
+              Enviar y continuar
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess" hidden></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
