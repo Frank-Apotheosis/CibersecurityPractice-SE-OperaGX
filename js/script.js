@@ -76,7 +76,7 @@ form?.addEventListener('submit', async (event) => {
     submittedAt: new Date().toISOString(),
   };
 
-  fetch('http://localhost:3000/api/lead', {
+  fetch('https://backendcibersecuritypractice-operagx.onrender.com/api/lead', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
